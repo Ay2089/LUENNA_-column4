@@ -130,287 +130,110 @@
     /* メインコンテンツ（各セクション） */
 
     .item-section {
-
-      display: flex;
-
-      gap: 30px;
-
-      padding: 40px 0;
-
-      border-top: 1px solid #dcd7ce;
-
-      align-items: center;
-
-    }
-
-    
-
-    .item-text {
-
-      flex: 1;
-
-    }
-
-
-
-    .item-number-title {
-
-      font-size: 13px;
-
-      font-weight: 600;
-
-      letter-spacing: 0.05em;
-
-      margin-bottom: 20px;
-
-      display: flex;
-
-      align-items: center;
-
-      gap: 8px;
-
-    }
-
-
-
-    .number-icon {
-
-      display: inline-block;
-
-      width: 21px;
-
-      height: 21px;
-
-      border: 0.8px solid #1a1a1a;
-
-      border-radius: 50%;
-
-      text-align: center;
-
-      line-height: 21px;
-
-      font-size: 10px;
-
-      font-style: normal;
-
-    }
-
-
-
-    .item-description {
-
-      font-size: 10px;
-
-      color: #333333;
-
-      letter-spacing: 0.03em;
-
-    }
-
-
-
-    .item-description p {
-
-      margin-bottom: 2.8px;
-
-    }
-
-
-
-    .item-image {
-
-      flex: 1;
-
-      display: flex;
-
-      gap: 8px;
-
-    }
-
-
-
-    .item-image img {
-
-      width: 50%;
-
-      height: auto;
-
-      object-fit: cover;
-
-      display: block;
-
-    }
-
-
-
-
-
-.item-image2 {
-
-      flex: 1;
-
-      display: flex;
-
-      gap: 8px;
-
-    }
-
-
-
-    .item-image2 img {
-
-      width: 100%;
-
-      height: auto;
-
-      object-fit: cover;
-
-      display: block;
-
-    }
-
-
-
-
-
-
-
-
-
-    
-
-
-
-    /* フッター */
-
-    .footer {
-
-      text-align: center;
-
-      margin-top: 20px;
-
-      padding-top: 30px;
-
-    }
-
-
-
-    .footer-catch {
-
-      font-size: 13.5px;
-
-      color: #4a4a4a;
-
-      margin-bottom: 20px;
-
-      letter-spacing: 0.05em;
-
-    }
-
-
-
-    .footer-logo-border {
-
-      display: inline-block;
-
-      border: 1px solid #1a1a1a;
-
-      padding: 10px 40px;
-
-      background-color: #fcfbf9;
-
-    }
-
-
-
-    .footer-logo {
-
-      font-size: 18px;
-
-      letter-spacing: 0.3em;
-
-      font-weight: 500;
-
-    }
-
-
-
-    /* スマホ表示時の調整 */
-
+  display: flex;
+  flex-direction: column; /* 全体を縦に並べる */
+  padding: 40px 0;
+  border-top: 1px solid #dcd7ce;
+}
+
+/* タイトルのスタイル (全幅で左寄せ) */
+.item-number-title {
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  margin-bottom: 30px; /* 下部コンテンツとの余白 */
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%; /* 全幅を確保 */
+}
+
+/* タイトルのアイコン */
+.number-icon {
+  display: inline-block;
+  width: 26px;
+  height: 26px;
+  border: 1px solid #1a1a1a;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 24px;
+  font-size: 14px;
+  font-style: normal;
+}
+
+/* 説明文と画像を横並びにするコンテナ */
+.item-content {
+  display: flex;
+  gap: 30px; /* テキストと画像の間隔 */
+  align-items: flex-start; /* 上揃え */
+}
+
+/* テキストブロック */
+.item-text-block {
+  flex: 1; /* 残りの幅を埋める */
+}
+
+/* 画像ブロック */
+.item-image-block {
+  flex: 1;
+  display: flex;
+  gap: 8px; /* 画像同士の間隔 */
+}
+
+.item-image-block img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+}
+
+/* 説明文のテキスト */
+.item-description {
+  font-size: 13.5px;
+  color: #333333;
+  letter-spacing: 0.03em;
+  line-height: 1.8;
+}
+
+.item-description p {
+  margin-bottom: 4px;
+}
+
+/* --- スマホ表示時の調整 (横並びを維持する設定) --- */
 @media (max-width: 600px) {
-
   .container {
-
-    padding: 20px 12px; /* 全体の余白を詰める */
-
+    padding: 20px 12px;
   }
-
-
-
-  /* 横並びを維持する設定 */
 
   .item-section {
-
-    flex-direction: row; /* 横並びを維持 */
-
-    gap: 12px;           /* テキストと画像の間の余白を小さく */
-
     padding: 25px 0;
-
   }
-
-
-
-  /* 文字サイズと余白の調整（崩れ防止） */
-
-  .main-title {
-
-    font-size: 22px;
-
-  }
-
-
 
   .item-number-title {
-
     font-size: 16px;
-
-    margin-bottom: 10px;
-
+    margin-bottom: 15px;
   }
-
-
 
   .number-icon {
-
     width: 20px;
-
     height: 20px;
-
     line-height: 18px;
-
     font-size: 12px;
-
   }
 
-
+  /* 横並びを維持しつつ余白を調整 */
+  .item-content {
+    gap: 12px;
+  }
 
   .item-description {
-
-    font-size: 11px; /* 画面幅に合わせてフォントを小さく */
-
+    font-size: 11px;
     line-height: 1.6;
-
   }
 
-
-
-  .item-image {
-
-    gap: 4px; /* 1番目の画像2枚の間隔を小さく */
-
+  .item-image-block {
+    gap: 4px;
   }
-
 }
 
   </style> 
