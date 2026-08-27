@@ -172,25 +172,45 @@
       font-weight: 500;
     }
 
-    /* スマホ表示向けの調整（画面幅が狭い場合） */
-    @media (max-width: 600px) {
-      .container {
-        padding: 30px 20px;
-      }
+    /* スマホ表示時の調整 */
+@media (max-width: 600px) {
+  .container {
+    padding: 20px 12px; /* 全体の余白を詰める */
+  }
 
-      .item-section {
-        flex-direction: column-reverse;
-        gap: 20px;
-      }
+  /* 横並びを維持する設定 */
+  .item-section {
+    flex-direction: row; /* 横並びを維持 */
+    gap: 12px;           /* テキストと画像の間の余白を小さく */
+    padding: 25px 0;
+  }
 
-      .main-title {
-        font-size: 24px;
-      }
+  /* 文字サイズと余白の調整（崩れ防止） */
+  .main-title {
+    font-size: 22px;
+  }
 
-      .item-image {
-        width: 100%;
-      }
-    }
+  .item-number-title {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+
+  .number-icon {
+    width: 20px;
+    height: 20px;
+    line-height: 18px;
+    font-size: 12px;
+  }
+
+  .item-description {
+    font-size: 11px; /* 画面幅に合わせてフォントを小さく */
+    line-height: 1.6;
+  }
+
+  .item-image {
+    gap: 4px; /* 1番目の画像2枚の間隔を小さく */
+  }
+}
   </style>
 </head>
 <body>
