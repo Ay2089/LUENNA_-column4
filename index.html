@@ -68,31 +68,31 @@
     letter-spacing: 0.05em;
   }
 
-  /* メインコンテンツ（各セクション） */
+  /* メインコンテンツ（CSS Gridで上タイトル・下横並びを確実に構築） */
   .item-section {
-    display: flex;
-    flex-wrap: wrap; /* 折り返しを有効化 */
-    gap: 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* 左：文章 / 右：画像 の2列 */
+    column-gap: 30px;
+    row-gap: 20px;
     padding: 40px 0;
     border-top: 1px solid #dcd7ce;
-    align-items: flex-start;
-  }
-  
-  /* 中のコンテナの枠組みを解除してタイトルを上部に押し出す */
-  .item-text {
-    display: contents;
+    align-items: start;
   }
 
-  /* タイトルを上に全幅で配置 */
+  .item-text {
+    display: contents; /* Grid内で配下要素を直接制御 */
+  }
+
+  /* ①タイトルを最上部で2列分ぶち抜き（全幅）指定 */
   .item-number-title {
-    width: 100%;
+    grid-column: 1 / -1;
     font-size: 13px;
     font-weight: 600;
     letter-spacing: 0.05em;
-    margin-bottom: 20px;
     display: flex;
     align-items: center;
     gap: 8px;
+    margin-bottom: 0;
   }
 
   .number-icon {
@@ -107,36 +107,39 @@
     font-style: normal;
   }
 
-  /* タイトルの下で左側に配置される説明文 */
+  /* ②文章を左列に固定 */
   .item-description {
-    flex: 1;
+    grid-column: 1;
     font-size: 10px;
     color: #333333;
     letter-spacing: 0.03em;
+    width: 100%;
   }
 
   .item-description p {
     margin-bottom: 2.8px;
   }
 
-  /* 右側に配置される画像 */
+  /* ③画像を右列に固定 */
   .item-image {
-    flex: 1;
+    grid-column: 2;
     display: flex;
     gap: 8px;
+    width: 100%;
   }
 
   .item-image img {
-    width: 50%;
+    width: calc(50% - 4px);
     height: auto;
     object-fit: cover;
     display: block;
   }
 
   .item-image2 {
-    flex: 1;
+    grid-column: 2;
     display: flex;
     gap: 8px;
+    width: 100%;
   }
 
   .item-image2 img {
@@ -173,14 +176,15 @@
     font-weight: 500;
   }
 
-  /* スマホ表示時の調整 */
+  /* スマホ表示時の調整（横並びを死守） */
   @media (max-width: 600px) {
     .container {
-      padding: 20px 12px; /* 全体の余白を詰める */
+      padding: 20px 12px;
     }
 
     .item-section {
-      gap: 12px; /* テキストと画像の間の余白を小さく */
+      column-gap: 12px;
+      row-gap: 10px;
       padding: 25px 0;
     }
 
@@ -190,7 +194,6 @@
 
     .item-number-title {
       font-size: 16px;
-      margin-bottom: 10px;
     }
 
     .number-icon {
@@ -201,12 +204,16 @@
     }
 
     .item-description {
-      font-size: 11px; /* 画面幅に合わせてフォントを小さく */
+      font-size: 11px;
       line-height: 1.6;
     }
 
     .item-image {
-      gap: 4px; /* 1番目の画像2枚の間隔を小さく */
+      gap: 4px;
+    }
+
+    .item-image img {
+      width: calc(50% - 2px);
     }
   }
 </style>
