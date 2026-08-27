@@ -9,209 +9,207 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600&display=swap" rel="stylesheet">
   
-  <style>
-    /* 全体設定 */
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+<style>
+  /* 全体設定 */
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
 
-    body {
-      background-color: #f7f6f4; /* 薄い生成り色 */
-      color: #1a1a1a;
-      font-family: 'Shippori Mincho', 'YuMincho', 'Hiragino Mincho ProN', serif;
-      line-height: 1.8;
-      display: flex;
-      justify-content: center;
-      padding: 40px 20px;
-    }
+  body {
+    background-color: #f7f6f4; /* 薄い生成り色 */
+    color: #1a1a1a;
+    font-family: 'Shippori Mincho', 'YuMincho', 'Hiragino Mincho ProN', serif;
+    line-height: 1.8;
+    display: flex;
+    justify-content: center;
+    padding: 40px 20px;
+  }
 
-    .container {
-      max-width: 680px;
-      width: 100%;
-      background-color: #fcfbf9;
-      padding: 50px 40px;
-      border: 1px solid #e8e5e0;
-    }
-
-    /* ヘッダー */
-    .header {
-      text-align: center;
-      margin-bottom: 40px;
-    }
-
-    .brand-subtitle {
-      font-size: 14px;
-      letter-spacing: 0.25em;
-      color: #1a1a1a;
-      text-transform: uppercase;
-      margin-bottom: 8px;
-    }
-
-    .star-divider {
-      font-size: 10px;
-      color: #334155;
-      margin-bottom: 15px;
-    }
-
-    .main-title {
-      font-size: 32px;
-      font-weight: 500;
-      letter-spacing: 0.1em;
-      margin-bottom: 12px;
-    }
-
-    .lead-text {
-      font-size: 14px;
-      color: #4a4a4a;
-      letter-spacing: 0.05em;
-    }
-
-    /* メインコンテンツ（各セクション） */
-    .item-section {
-      display: flex;
-      gap: 30px;
-      padding: 40px 0;
-      border-top: 1px solid #dcd7ce;
-      align-items: center;
-    }
-    
-    .item-text {
-      flex: 1;
-    }
-
-    .item-number-title {
-      font-size: 13px;
-      font-weight: 600;
-      letter-spacing: 0.05em;
-      margin-bottom: 20px;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-
-    .number-icon {
-      display: inline-block;
-      width: 21px;
-      height: 21px;
-      border: 0.8px solid #1a1a1a;
-      border-radius: 50%;
-      text-align: center;
-      line-height: 21px;
-      font-size: 10px;
-      font-style: normal;
-    }
-
-    .item-description {
-      font-size: 10px;
-      color: #333333;
-      letter-spacing: 0.03em;
-    }
-
-    .item-description p {
-      margin-bottom: 2.8px;
-    }
-
-    .item-image {
-      flex: 1;
-      display: flex;
-      gap: 8px;
-    }
-
-    .item-image img {
-      width: 50%;
-      height: auto;
-      object-fit: cover;
-      display: block;
-    }
-
-
-.item-image2 {
-      flex: 1;
-      display: flex;
-      gap: 8px;
-    }
-
-    .item-image2 img {
-      width: 100%;
-      height: auto;
-      object-fit: cover;
-      display: block;
-    }
-
-
-
-
-    
-
-    /* フッター */
-    .footer {
-      text-align: center;
-      margin-top: 20px;
-      padding-top: 30px;
-    }
-
-    .footer-catch {
-      font-size: 13.5px;
-      color: #4a4a4a;
-      margin-bottom: 20px;
-      letter-spacing: 0.05em;
-    }
-
-    .footer-logo-border {
-      display: inline-block;
-      border: 1px solid #1a1a1a;
-      padding: 10px 40px;
-      background-color: #fcfbf9;
-    }
-
-    .footer-logo {
-      font-size: 18px;
-      letter-spacing: 0.3em;
-      font-weight: 500;
-    }
-
-    /* スマホ表示時の調整 */
-@media (max-width: 600px) {
   .container {
-    padding: 20px 12px; /* 全体の余白を詰める */
+    max-width: 680px;
+    width: 100%;
+    background-color: #fcfbf9;
+    padding: 50px 40px;
+    border: 1px solid #e8e5e0;
   }
 
-  /* 横並びを維持する設定 */
-  .item-section {
-    flex-direction: row; /* 横並びを維持 */
-    gap: 12px;           /* テキストと画像の間の余白を小さく */
-    padding: 25px 0;
+  /* ヘッダー */
+  .header {
+    text-align: center;
+    margin-bottom: 40px;
   }
 
-  /* 文字サイズと余白の調整（崩れ防止） */
+  .brand-subtitle {
+    font-size: 14px;
+    letter-spacing: 0.25em;
+    color: #1a1a1a;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+
+  .star-divider {
+    font-size: 10px;
+    color: #334155;
+    margin-bottom: 15px;
+  }
+
   .main-title {
-    font-size: 22px;
+    font-size: 32px;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    margin-bottom: 12px;
   }
 
+  .lead-text {
+    font-size: 14px;
+    color: #4a4a4a;
+    letter-spacing: 0.05em;
+  }
+
+  /* メインコンテンツ（各セクション） */
+  .item-section {
+    display: flex;
+    flex-wrap: wrap; /* 折り返しを有効化 */
+    gap: 30px;
+    padding: 40px 0;
+    border-top: 1px solid #dcd7ce;
+    align-items: flex-start;
+  }
+  
+  /* 中のコンテナの枠組みを解除してタイトルを上部に押し出す */
+  .item-text {
+    display: contents;
+  }
+
+  /* タイトルを上に全幅で配置 */
   .item-number-title {
-    font-size: 16px;
-    margin-bottom: 10px;
+    width: 100%;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
   }
 
   .number-icon {
-    width: 20px;
-    height: 20px;
-    line-height: 18px;
-    font-size: 12px;
+    display: inline-block;
+    width: 21px;
+    height: 21px;
+    border: 0.8px solid #1a1a1a;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 21px;
+    font-size: 10px;
+    font-style: normal;
   }
 
+  /* タイトルの下で左側に配置される説明文 */
   .item-description {
-    font-size: 11px; /* 画面幅に合わせてフォントを小さく */
-    line-height: 1.6;
+    flex: 1;
+    font-size: 10px;
+    color: #333333;
+    letter-spacing: 0.03em;
   }
 
-  .item-image {
-    gap: 4px; /* 1番目の画像2枚の間隔を小さく */
+  .item-description p {
+    margin-bottom: 2.8px;
   }
-}
-  </style>
+
+  /* 右側に配置される画像 */
+  .item-image {
+    flex: 1;
+    display: flex;
+    gap: 8px;
+  }
+
+  .item-image img {
+    width: 50%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+  }
+
+  .item-image2 {
+    flex: 1;
+    display: flex;
+    gap: 8px;
+  }
+
+  .item-image2 img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+  }
+
+  /* フッター */
+  .footer {
+    text-align: center;
+    margin-top: 20px;
+    padding-top: 30px;
+  }
+
+  .footer-catch {
+    font-size: 13.5px;
+    color: #4a4a4a;
+    margin-bottom: 20px;
+    letter-spacing: 0.05em;
+  }
+
+  .footer-logo-border {
+    display: inline-block;
+    border: 1px solid #1a1a1a;
+    padding: 10px 40px;
+    background-color: #fcfbf9;
+  }
+
+  .footer-logo {
+    font-size: 18px;
+    letter-spacing: 0.3em;
+    font-weight: 500;
+  }
+
+  /* スマホ表示時の調整 */
+  @media (max-width: 600px) {
+    .container {
+      padding: 20px 12px; /* 全体の余白を詰める */
+    }
+
+    .item-section {
+      gap: 12px; /* テキストと画像の間の余白を小さく */
+      padding: 25px 0;
+    }
+
+    .main-title {
+      font-size: 22px;
+    }
+
+    .item-number-title {
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+
+    .number-icon {
+      width: 20px;
+      height: 20px;
+      line-height: 18px;
+      font-size: 12px;
+    }
+
+    .item-description {
+      font-size: 11px; /* 画面幅に合わせてフォントを小さく */
+      line-height: 1.6;
+    }
+
+    .item-image {
+      gap: 4px; /* 1番目の画像2枚の間隔を小さく */
+    }
+  }
+</style>
 </head>
 <body>
 
@@ -226,13 +224,12 @@
 
     <!-- ① ヘンリーネック -->
     <section class="item-section">
-       <div class="item-title">
- 　　　　<h2 class="item-number-title">
-          <i class="number-icon">1</i> ヘンリーネック
-        </h2>
-              </div>
-      <div class="item-text">
-        <div class="item-description">
+       <h2 class="item-number-title">
+    <i class="number-icon">1</i> ヘンリーネック
+  </h2>
+  <div class="item-content">
+    <div class="item-text-block">
+      <div class="item-description">
           <p>今季、国内外で注目を集めるヘンリーネック。</p>
           <p>LUENNAでは、表情のある</p>
           <p>リブ編みにリングスナップを</p>
