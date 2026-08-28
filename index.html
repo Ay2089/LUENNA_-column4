@@ -332,23 +332,37 @@
 
 
 
-    .footer-logo {
-      font-size: 18px;
-      font-weight:bold;
-      display: block;
-width: 100%；
-max-width: 40px;
-margin: 40px auto 0 auto: padding: 15px 0;
-border: 0.8px solid #000000;
-      background-color: #262626:
-color: #ffffff; 
-text-decoration: none:
-transition: all 0.3s ease: letter-spacing: 0.1em:  }
+
     
 .footer-logo:hover{
 background-color: #000000:
   color: #161616;
     }
+
+
+    .footer-logo {
+  font-size: 18px;
+  font-weight: bold;
+  display: block;
+  
+  /* 幅を小さくして中央寄せ */
+  width: 100%;
+  max-width: 180px; /* ★好みの太さ・幅に合わせて150px〜200px程度で調整してください */
+  margin: 40px auto 0 auto;
+  padding: 15px 0;
+  
+  /* 見た目の指定 */
+  border: 0.8px solid #000000;
+  background-color: #262626;
+  color: #ffffff;
+  
+  /* 下線を消す＆文字間隔を空ける */
+  text-decoration: none; /* ★下線を削除 */
+  letter-spacing: 0.2em; /* ★文字と文字の間に少し余裕を持たせる */
+  text-align: center;   /* 文字を枠の中央に配置 */
+  
+  transition: all 0.3s ease;
+}
 
 
 
